@@ -77,8 +77,6 @@ main {
   gap: 30px;
   align-items: center;
 }
-
-/* ✅ wrapper div gets position:relative so badge positions correctly */
 .wish-container,
 .cart-container {
   position: relative;
@@ -112,7 +110,6 @@ main {
   pointer-events: none;
 }
 
-/* ── Sidebar list items ── */
 .sidebar li {
   display: flex;
   align-items: center;
@@ -195,7 +192,7 @@ main {
 
 /* ── Hero section ── */
 .box {
-  height: 290px;
+  height: 300px;
   width: calc(100% - 260px);
   max-width: 100%;
   margin-left: 238px;
@@ -279,10 +276,6 @@ main {
 .sidebar-overlay.active {
   display: block;
 }
-
-/* ════════════════════════════════
-   RESPONSIVE
-════════════════════════════════ */
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 1024px) {
