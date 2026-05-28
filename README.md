@@ -129,7 +129,7 @@ Through this project, I improved my understanding of:
 
 GitHub link:https://github.com/hemach838-byte/phone1
 
-Live Demo:
+Live Demo: https://hemach838-byte.github.io/phone1/
 
 ## 👩‍💻 Author
 
