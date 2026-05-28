@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Viewer UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="card.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search phone..." class="input" />
+      </div>
+
+      <select id="company">
+        <option value="all">All Brands</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Apple">Apple</option>
+        <option value="OnePlus">OnePlus</option>
+        <option value="Xiaomi">Xiaomi</option>
+        <option value="Realme">Realme</option>
+        <option value="iQOO">iQOO</option>
+        <option value="Vivo">Vivo</option>
+        <option value="Oppo">Oppo</option>
+      </select>
+
+      <div class="nav-icons">
+        <i class="fa-solid fa-heart wish-container">
+          <span class="icon-count wish-count">0</span>
+        </i>
+        <i class="fa-solid fa-cart-shopping cart-container">
+          <span class="icon-count cart-count">0</span>
+        </i>
+      </div>
+    </nav>
+    <div class="layout">
+      <aside class="sidebar">
+        <h2 class="title">
+          <i class="fa-solid fa-bag-shopping"></i>
+          PhoneShop
+        </h2>
+        <h3>Categories</h3>
+        <ul class="categories-filter">
+          <li data-category="all">
+            <i class="fa-solid fa-mobile-screen"></i> All Phones
+          </li>
+
+          <li data-category="students">
+            <i class="fa-solid fa-graduation-cap"></i>
+            For Students
+          </li>
+
+          <li data-category="camera">
+            <i class="fa-solid fa-camera"></i>
+            For Camera
+          </li>
+
+          <li data-category="gaming">
+            <i class="fa-solid fa-gamepad"></i>
+            For Gaming
+          </li>
+
+          <li data-category="battery">
+            <i class="fa-solid fa-battery-full"></i>
+            For Battery
+          </li>
+
+          <li data-category="work">
+            <i class="fa-solid fa-briefcase"></i>
+            For Work
+          </li>
+        </ul>
+        <h3>Top Brands</h3>
+        <ul class="brand-filters">
+          <li>
+            <input type="checkbox" value="Samsung" class="brand-check" />Samsung
+          </li>
+          <li>
+            <input type="checkbox" value="Apple" class="brand-check" />Apple
+          </li>
+          <li>
+            <input type="checkbox" value="OnePlus" class="brand-check" />
+            OnePlus
+          </li>
+          <li>
+            <input type="checkbox" value="Xiaomi" class="brand-check" /> Xiaomi
+          </li>
+          <li>
+            <input type="checkbox" value="realme" class="brand-check" /> Realme
+          </li>
+        </ul>
+        <button class="reset">Reset Filters</button>
+      </aside>
+      <main class="main-content">
+        <div class="box">
+          <div class="first-half">
+            <h1>Find the Perfect Phone For Every Need</h1>
+
+            <p>Top brands • Best prices • Latest phones</p>
+
+            <button>Explore Now</button>
+          </div>
+          <div class="image">
+            <img src="phone.png" alt="phone image" />
+          </div>
+        </div>
+        <div class="phones-container"></div>
+      </main>
+    </div>
+    <div class="phone-details" id="phoneDetails">
+      <div class="details-card">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img id="detailsImage" src="" alt="" class="details-img" />
+        <h1 id="detailsTitle"></h1>
+        <p id="detailsPrice"></p>
+        <div class="details-specs">
+          <p id="detailsRam"></p>
+          <p id="detailsStorage"></p>
+          <p id="detailsBattery"></p>
+          <p id="detailsCamera"></p>
+          <p id="detailsProcessor"></p>
+          <p id="detailsDisplay"></p>
+        </div>
+        <div class="details-buttons">
+          <button class="add-cart-btn">Add to Cart</button>
+          <button class="buy-now-btn">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="info.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
