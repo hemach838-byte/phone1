@@ -2,16 +2,26 @@
 const input = document.querySelector(".input");
 input.addEventListener("input", () => {
   const value = input.value.toLowerCase();
-  const filtered = phones.filter((phone) => {
+  let currentArray = phones;
+  let currentContainer = phonesContainer;
+   if (document.querySelector(".wishlist-page")) {
+    currentArray = wishlist;
+    currentContainer = document.querySelector(".wishlist-items");
+  }
+  if (document.querySelector(".cartlist-page")) {
+    currentArray = cartlist;
+    currentContainer = document.querySelector(".cartlist-items");
+  }
+  const filtered = currentArray.filter((phone) => {
     return (
       phone.brand.toLowerCase().includes(value) ||
       phone.model.toLowerCase().includes(value)
     );
   });
   if (filtered.length === 0) {
-    phonesContainer.innerHTML = "<p class='error-msg'>No phones found</p>";
+    currentContainer.innerHTML = "<p class='error-msg'>No phones found</p>";
   } else {
-    displayPhones(filtered, phonesContainer);
+    displayPhones(filtered, currentContainer);
   }
 });
 //Brand selection
